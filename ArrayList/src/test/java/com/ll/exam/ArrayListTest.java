@@ -64,4 +64,18 @@ public class ArrayListTest {
 
         assertEquals(rs, 22);
     }
+
+    @Test
+    public void addAtTest(){
+        for (int i = 0; i<3; i++)
+            arr.add(i*11);
+
+        arr.addAt(3, 1);
+
+        assertEquals(arr.get(0), 0);
+        assertEquals(arr.get(1),3);
+        assertEquals(arr.get(2),11);
+        assertEquals(arr.get(3),22);
+    }
+
 }

@@ -43,4 +43,13 @@ class ArrayList{
     public Object get(int idx) {
         return datum[idx];
     }
+
+    public void addAt(Object o, int idx) {
+        extendList();
+        for (int i = lastIndex + 1; i > idx; i--){
+            datum[i] = datum[i-1];
+        }
+        datum[idx] = o;
+        lastIndex++;
+    }
 }
