@@ -131,4 +131,20 @@ class ArrayList{
             System.out.printf("%d : %d\n",i, datum[i]);
         }
     }
+
+    public boolean contains(Object data) {
+        for (int i= 0; i<lastIndex; i++) {
+            if (datum[i].equals(data))
+                return true;
+        }
+        return false;
+    }
+
+    public boolean contains2(Object data){
+        for (Object element : datum) {
+            if (element.equals(data))
+                return true;
+        }
+        return false;
+    }
 }

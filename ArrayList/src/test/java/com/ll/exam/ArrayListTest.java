@@ -112,4 +112,20 @@ public class ArrayListTest {
 
     }
 
+    @Test
+    public void containsTest(){
+        // cotains는 리스트 안에 찾고자 하는 객체가 있는지 판별하는 메서드
+
+        arr.add(100);
+        boolean rs1 = arr.contains(100);
+        boolean rs2 = arr.contains(200);
+
+        boolean rs3 = arr.contains2(200);
+
+        assertEquals(rs1, true);
+        assertEquals(rs2, false);
+        assertEquals(rs3, false);
+    }
 }
+
+
