@@ -78,4 +78,14 @@ public class ArrayListTest {
         assertEquals(arr.get(3),22);
     }
 
+    @Test
+    public void removeTest(){
+        arr.add(100);
+        arr.add(200);
+
+        arr.remove(1);
+
+        assertEquals(arr.get(1), 200);
+    }
+
 }

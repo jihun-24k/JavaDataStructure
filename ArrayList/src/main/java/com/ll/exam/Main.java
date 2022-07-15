@@ -52,4 +52,12 @@ class ArrayList{
         datum[idx] = o;
         lastIndex++;
     }
+
+    public void remove(int idx) {
+        for (int i = idx; i < lastIndex - 1; i++){
+            datum[i] = datum[i + 1];
+        }
+        datum[lastIndex] = null;
+        lastIndex--;
+    }
 }
