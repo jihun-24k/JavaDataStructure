@@ -28,9 +28,20 @@ public class ArrayListTest {
     }
 
     @Test
-    public void size(){
+    public void sizeTest(){
         arr.add(1111);
         int rs = arr.size();
         assertEquals(rs, 1);
     }
+
+    @Test
+    public void getArrayLenTest(){
+        for (int i = 0; i<10; i++)
+            arr.add(100);
+
+        int rs = arr.getArrayLen();
+
+        assertEquals(rs, 10);
+    }
+
 }

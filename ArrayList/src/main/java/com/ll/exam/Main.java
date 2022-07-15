@@ -24,4 +24,8 @@ class ArrayList{
     public int size() {
         return lastIndex;
     }
+
+    public int getArrayLen() {
+        return datum.length;
+    }
 }
