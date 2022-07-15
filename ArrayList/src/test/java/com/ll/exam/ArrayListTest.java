@@ -1,8 +1,15 @@
 package com.ll.exam;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ArrayListTest {
+    private ArrayList arr;
+
+    @BeforeEach
+    void BeforeEach(){
+        arr = new ArrayList();
+    }
     @Test
     public void ArrayListTest(){
         ArrayList arrayList = new ArrayList();
@@ -10,13 +17,11 @@ public class ArrayListTest {
 
     @Test
     public void addTestInt(){
-        ArrayList arr = new ArrayList();
         arr.add(100);
     }
 
     @Test
     public void addTestString(){
-        ArrayList arr = new ArrayList();
         arr.add("안녕");
     }
 }
