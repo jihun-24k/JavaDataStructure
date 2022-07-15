@@ -140,4 +140,7 @@ class ArrayList{
         return false;
     }
 
+    public void set(int idx, Object data) {
+        datum[idx] = data;
+    }
 }

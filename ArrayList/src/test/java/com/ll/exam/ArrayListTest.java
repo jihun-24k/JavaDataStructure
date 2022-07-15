@@ -123,6 +123,19 @@ public class ArrayListTest {
         assertEquals(rs1, true);
         assertEquals(rs2, false);
     }
+
+    @Test
+    public void setTest(){
+        arr.add(100);
+        arr.add(200);
+        arr.add(300);
+
+        arr.set(1,222);
+
+        assertEquals(arr.get(0),100);
+        assertEquals(arr.get(1), 222);
+        assertEquals(arr.get(2),300);
+    }
 }
 
 
