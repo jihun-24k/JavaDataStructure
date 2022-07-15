@@ -3,6 +3,8 @@ package com.ll.exam;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class ArrayListTest {
     private ArrayList arr;
 
@@ -23,5 +25,12 @@ public class ArrayListTest {
     @Test
     public void addTestString(){
         arr.add("안녕");
+    }
+
+    @Test
+    public void size(){
+        arr.add(1111);
+        int rs = arr.size();
+        assertEquals(rs, 1);
     }
 }

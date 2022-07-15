@@ -18,5 +18,10 @@ class ArrayList{
 
     public void add(Object o) {
         datum[lastIndex] = o;
+        lastIndex++;
+    }
+
+    public int size() {
+        return lastIndex;
     }
 }
