@@ -55,4 +55,13 @@ public class ArrayListTest {
         assertEquals(rs1, 10);
         assertEquals(rs2, 20);
     }
+
+    @Test
+    public void getTest(){
+        for (int i = 0; i<10; i++)
+            arr.add(i*11);
+        Object rs = arr.get(2);
+
+        assertEquals(rs, 22);
+    }
 }

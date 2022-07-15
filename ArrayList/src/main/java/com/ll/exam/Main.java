@@ -39,4 +39,8 @@ class ArrayList{
             datum = newDatum;
         }
     }
+
+    public Object get(int idx) {
+        return datum[idx];
+    }
 }
