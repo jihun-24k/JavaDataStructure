@@ -3,7 +3,10 @@ package com.ll.exam;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ArrayListTest {
     private ArrayList arr;
@@ -86,6 +89,27 @@ public class ArrayListTest {
         arr.remove(1);
 
         assertEquals(arr.get(1), 200);
+    }
+
+    @Test
+    public void showAllValuesTest(){
+        arr.add(100);
+        arr.add(200);
+        arr.add(300);
+
+        ByteArrayOutputStream output = TestUtil.setOutToByteArray();
+
+        arr.showAllValues();
+
+        String rs = output.toString();
+
+        TestUtil.clearSetOutToByteArray(output);
+
+        assertTrue(rs.contains("== 전체 데이터 출력 =="));
+        assertTrue(rs.contains("0 : 100"));
+        assertTrue(rs.contains("1 : 200"));
+        assertTrue(rs.contains("2 : 300"));
+
     }
 
 }

@@ -60,4 +60,11 @@ class ArrayList{
         datum[lastIndex] = null;
         lastIndex--;
     }
+
+    public void showAllValues() {
+        System.out.println("== 전체 데이터 출력 ==");
+        for (int i = 0; i<lastIndex; i++){
+            System.out.printf("%d : %d",i, datum[i]);
+        }
+    }
 }
