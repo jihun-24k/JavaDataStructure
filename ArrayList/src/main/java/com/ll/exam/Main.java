@@ -140,11 +140,4 @@ class ArrayList{
         return false;
     }
 
-    public boolean contains2(Object data){
-        for (Object element : datum) {
-            if (element.equals(data))
-                return true;
-        }
-        return false;
-    }
 }

@@ -120,11 +120,8 @@ public class ArrayListTest {
         boolean rs1 = arr.contains(100);
         boolean rs2 = arr.contains(200);
 
-        boolean rs3 = arr.contains2(200);
-
         assertEquals(rs1, true);
         assertEquals(rs2, false);
-        assertEquals(rs3, false);
     }
 }
 
