@@ -44,4 +44,15 @@ public class ArrayListTest {
         assertEquals(rs, 10);
     }
 
+    @Test
+    public void extendListTest(){
+        for (int i = 0; i<10; i++)
+            arr.add(100);
+        int rs1 = arr.getArrayLen();
+
+        arr.add(200);
+        int rs2 = arr.getArrayLen();
+        assertEquals(rs1, 10);
+        assertEquals(rs2, 20);
+    }
 }

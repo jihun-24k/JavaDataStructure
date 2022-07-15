@@ -17,6 +17,7 @@ class ArrayList{
     }
 
     public void add(Object o) {
+        extendList();
         datum[lastIndex] = o;
         lastIndex++;
     }
@@ -27,5 +28,15 @@ class ArrayList{
 
     public int getArrayLen() {
         return datum.length;
+    }
+
+    public void extendList(){
+        if (lastIndex >= getArrayLen()){
+            Object[] newDatum = new Object[getArrayLen() * 2];
+            for (int i =0; i < getArrayLen(); i++){
+                newDatum[i] = datum[i];
+            }
+            datum = newDatum;
+        }
     }
 }
