@@ -68,6 +68,10 @@ class Main {
 		5 : 500
 		6 : 600
 		*/
+
+        al.set(1,777);
+        System.out.println(al.get(1));
+        System.out.println(al.contains(777));
     }
 }
 
