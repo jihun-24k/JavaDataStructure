@@ -11,19 +11,34 @@ public class HashMapTest {
     HashMap<String, Object> hs2;
 
     @BeforeEach
-    void beforeEach(){
-        hs1= new HashMap<>();
-        hs2= new HashMap<>();
+    void beforeEach() {
+        hs1 = new HashMap<>();
+        hs2 = new HashMap<>();
     }
 
     @Test
-    void putTest1(){
-        hs1.put("홍길동",1);
+    void putTest1() {
+        hs1.put("홍길동", 1);
     }
 
     @Test
-    void putTest2(){
-        hs2.put("홍길순","배고프다");
+    void putTest2() {
+        hs2.put("홍길순", "배고프다");
     }
 
+    @Test
+    void getTest1() {
+        hs1.put("홍길동", 1);
+        int rs = hs1.get("홍길동");
+
+        assertEquals(rs, 1);
+    }
+
+    @Test
+    void getTest2() {
+        hs2.put("홍길순", "배고프다");
+        Object rs = hs2.get("홍길순");
+
+        assertEquals(rs, "배고프다");
+    }
 }

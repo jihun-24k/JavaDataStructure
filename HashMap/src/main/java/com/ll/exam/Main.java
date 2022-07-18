@@ -22,4 +22,13 @@ class HashMap<K, V>{
         values[size] = value;
         size++;
     }
+
+    public V get(K key){
+        for (int i = 0; i < size; i++){
+            if (keys[i].equals(key)){
+                return (V)values[i];
+            }
+        }
+        return null;
+    }
 }
