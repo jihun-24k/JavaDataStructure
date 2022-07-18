@@ -18,9 +18,15 @@ class HashMap<K, V>{
     }
 
     public void put(K key, V value) {
-        keys[size] = key;
-        values[size] = value;
-        size++;
+        int index = getIndexOf(key);
+        if (index == -1){
+            keys[size] = key;
+            values[size] = value;
+            size++;
+        }
+        else{
+            values[index] = value;
+        }
     }
 
     public V get(K key){

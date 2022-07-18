@@ -52,4 +52,13 @@ public class HashMapTest {
         assertEquals(rs,0);
         assertEquals(rs2, -1);
     }
+
+    @Test
+    void modifyTest(){
+        hs1.put("홍길동", 1);
+        hs1.put("홍길동", 2);
+
+        int rs = hs1.get("홍길동");
+        assertEquals(rs,2);
+    }
 }
