@@ -24,11 +24,19 @@ class HashMap<K, V>{
     }
 
     public V get(K key){
+        int index = getIndexOf(key);
+        if (index == -1){
+            return null;
+        }
+        return (V)values[index];
+    }
+
+    public int getIndexOf(K key) {
         for (int i = 0; i < size; i++){
             if (keys[i].equals(key)){
-                return (V)values[i];
+                return i;
             }
         }
-        return null;
+        return -1;
     }
 }

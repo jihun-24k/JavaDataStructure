@@ -41,4 +41,15 @@ public class HashMapTest {
 
         assertEquals(rs, "배고프다");
     }
+
+    @Test
+    void getIndexOfTest(){
+        hs1.put("홍길동", 1);
+        hs1.put("홍길순", 2);
+        int rs = hs1.getIndexOf("홍길동");
+        int rs2 = hs1.getIndexOf("홍길빵");
+
+        assertEquals(rs,0);
+        assertEquals(rs2, -1);
+    }
 }
