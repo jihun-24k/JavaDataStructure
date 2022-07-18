@@ -74,4 +74,20 @@ public class HashMapTest {
         assertEquals(1,hs1.getIndexOf("홍길빵"));
         assertEquals(-1,hs1.getIndexOf("홍길순"));
     }
+
+    @Test
+    void sizeTest(){
+        hs1.put("철수", 22);
+        assertEquals(1, hs1.size());
+
+        hs1.put("영희", 25);
+        assertEquals(2, hs1.size());
+
+        hs1.remove("영희");
+
+        assertEquals(1, hs1.size());
+
+        hs1.remove("철수");
+        assertEquals(0, hs1.size());
+    }
 }

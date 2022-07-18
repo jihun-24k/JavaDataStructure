@@ -56,4 +56,8 @@ class HashMap<K, V>{
         values[size] = null;
         size--;
     }
+
+    public int size(){
+        return this.size;
+    }
 }
