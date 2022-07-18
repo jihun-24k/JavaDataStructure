@@ -61,4 +61,17 @@ public class HashMapTest {
         int rs = hs1.get("홍길동");
         assertEquals(rs,2);
     }
+
+    @Test
+    void removeTest(){
+        hs1.put("홍길동", 1);
+        hs1.put("홍길순", 2);
+        hs1.put("홍길빵", 3);
+
+        hs1.remove("홍길순");
+
+        assertEquals(0,hs1.getIndexOf("홍길동"));
+        assertEquals(1,hs1.getIndexOf("홍길빵"));
+        assertEquals(-1,hs1.getIndexOf("홍길순"));
+    }
 }

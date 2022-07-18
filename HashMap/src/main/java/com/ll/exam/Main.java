@@ -13,8 +13,8 @@ class HashMap<K, V>{
 
     HashMap(){
         this.size = 0;
-        this.keys = new Object[3];
-        this.values = new Object[3];
+        this.keys = new Object[100];
+        this.values = new Object[100];
     }
 
     public void put(K key, V value) {
@@ -44,5 +44,16 @@ class HashMap<K, V>{
             }
         }
         return -1;
+    }
+
+    public void remove(K key) {
+        int index = getIndexOf(key);
+        for (int i = index; i < size; i++){
+            keys[i] = keys[i+1];
+            values[i] = values[i+1];
+        }
+        keys[size] = null;
+        values[size] = null;
+        size--;
     }
 }
