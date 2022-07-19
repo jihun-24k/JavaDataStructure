@@ -3,6 +3,8 @@ package com.ll.exam;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -89,5 +91,18 @@ public class HashMapTest {
 
         hs1.remove("철수");
         assertEquals(0, hs1.size());
+    }
+
+    @Test
+    void keySetTest(){
+        hs2.put("홍길동", "동해번쩍!");
+        hs2.put("홍길순", "서해번쩍!");
+        hs2.put("홍길빵", "신출귀몰!");
+
+        Set<Object> keySet = hs2.keySet();
+
+        assertEquals(keySet.contains("홍길동"), true);
+        assertEquals(keySet.contains("홍길순"), true);
+        assertEquals(keySet.contains("홍길빵"), true);
     }
 }
