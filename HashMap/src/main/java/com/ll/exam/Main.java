@@ -1,5 +1,7 @@
 package com.ll.exam;
 
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -59,5 +61,12 @@ class HashMap<K, V>{
 
     public int size(){
         return this.size;
+    }
+
+    public Set<V> keySet() {
+        Set<V> keySet = new HashMap<>;
+        for (int i = 0; i< size; i++){
+            keySet.add(keys[i]);
+        }
     }
 }
