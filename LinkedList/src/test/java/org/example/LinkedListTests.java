@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 public class LinkedListTests {
     @Test
-    @DisplayName("테스트 실행")
-    public void t1(){
-
+    @DisplayName("LinkedList 생성")
+    public void createLinkedListTest(){
+        LinkedList linkedList = new LinkedList();
     }
 }
