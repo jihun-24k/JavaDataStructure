@@ -1,5 +1,8 @@
 package org.example;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,8 +16,15 @@ public class LinkedListTests {
     }
 
     @Test
-    @DisplayName("LinkedList 생성")
+    @DisplayName("LinkedList 생성 테스트")
     public void createLinkedListTest(){
         LinkedList linkedList = new LinkedList();
+    }
+
+    @Test
+    @DisplayName("add 메서드 테스트")
+    public void addTest () {
+        boolean isAdd = linkedList.add(1);
+        assertTrue(isAdd);
     }
 }
