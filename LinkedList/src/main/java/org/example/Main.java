@@ -9,4 +9,7 @@ public class Main {
 
 class LinkedList {
 
+    public boolean add(int i) {
+        return true;
+    }
 }
