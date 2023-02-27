@@ -35,11 +35,17 @@ class LinkedList {
     }
 
     public boolean contains(int e) {
+        return indexOf(e) >= 0;
+    }
+
+    public int indexOf(int e) {
+        int index = 0;
         for (Node node = first; node != null; node = node.next) {
             if (node.element == e)
-                return true;
+                return index;
+            index++;
         }
-        return false;
+        return -1;
     }
 }
 
