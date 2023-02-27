@@ -34,15 +34,19 @@ class LinkedList {
         return this.size;
     }
 
-    public boolean contains(int i) {
-        return true;
+    public boolean contains(int e) {
+        for (Node node = first; node != null; node = node.next) {
+            if (node.element == e)
+                return true;
+        }
+        return false;
     }
 }
 
 class Node {
-    private int element;
-    public Node previous;
-    public Node next;
+    int element;
+    Node previous;
+    Node next;
     public Node(Node prev, int element, Node next) {
         this.previous = prev;
         this.element = element;
