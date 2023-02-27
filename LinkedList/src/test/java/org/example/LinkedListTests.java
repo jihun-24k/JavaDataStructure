@@ -53,6 +53,14 @@ public class LinkedListTests {
     }
 
     @Test
+    @DisplayName("int indexOf 메서드 실패 테스트")
+    public void indexOfFailTest() {
+        int index = linkedList.indexOf(5);
+        assertEquals(-1, index);
+    }
+
+
+    @Test
     @DisplayName("LinkedList 사이즈 테스트")
     public void sizeTest() {
         int size = linkedList.size();
