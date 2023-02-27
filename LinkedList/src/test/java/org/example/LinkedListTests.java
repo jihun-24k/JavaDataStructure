@@ -12,7 +12,9 @@ public class LinkedListTests {
     @BeforeEach
     public void beforeEach() {
         linkedList = new LinkedList();
-        linkedList.add(1);
+        for (int i = 1; i <= 3; i++) {
+            linkedList.add(i);
+        }
     }
 
     @Test
@@ -38,16 +40,14 @@ public class LinkedListTests {
     @Test
     @DisplayName("boolean contains 메서드 실패 테스트")
     public void containsFailTest() {
-        boolean hasNode = linkedList.contains(2);
+        boolean hasNode = linkedList.contains(-1);
         assertTrue(!hasNode);
     }
-
 
     @Test
     @DisplayName("LinkedList 사이즈 테스트")
     public void sizeTest() {
-        linkedList.add(2);
         int size = linkedList.size();
-        assertEquals(2, size);
+        assertEquals(3, size);
     }
 }
