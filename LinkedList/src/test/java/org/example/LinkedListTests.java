@@ -31,6 +31,14 @@ public class LinkedListTests {
     }
 
     @Test
+    @DisplayName("void add 메서드 테스트")
+    public void voidAddTest() {
+        linkedList.add(4, 2);
+        int index = linkedList.indexOf(4);
+        assertEquals(2, index);
+    }
+
+    @Test
     @DisplayName("boolean contains 메서드 성공 테스트")
     public void containsSuccessTest() {
         boolean hasNode = linkedList.contains(1);
