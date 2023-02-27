@@ -32,7 +32,7 @@ public class LinkedListTests {
     @Test
     @DisplayName("boolean contains 메서드 테스트")
     public void containsTest() {
-        boolean hasNode = linkedList.cotains(1);
+        boolean hasNode = linkedList.contains(1);
         assertTrue(hasNode);
     }
 

@@ -22,4 +22,8 @@ class LinkedList {
     public int size() {
         return this.size;
     }
+
+    public boolean contains(int i) {
+        return true;
+    }
 }
