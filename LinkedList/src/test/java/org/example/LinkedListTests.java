@@ -44,6 +44,14 @@ public class LinkedListTests {
         assertTrue(!hasNode);
     }
 
+
+    @Test
+    @DisplayName("int indexOf 메서드 성공 테스트")
+    public void indexOfSuccessTest(){
+        int index = linkedList.indexOf(3);
+        assertEquals(2, index);
+    }
+
     @Test
     @DisplayName("LinkedList 사이즈 테스트")
     public void sizeTest() {
