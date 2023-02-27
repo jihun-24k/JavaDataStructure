@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 
 public class LinkedListTests {
     LinkedList linkedList;
-    @Test
     @BeforeEach
     public void beforeEach() {
         linkedList = new LinkedList();
@@ -30,14 +29,22 @@ public class LinkedListTests {
     }
 
     @Test
-    @DisplayName("boolean contains 메서드 테스트")
-    public void containsTest() {
+    @DisplayName("boolean contains 메서드 성공 테스트")
+    public void containsSuccessTest() {
         boolean hasNode = linkedList.contains(1);
         assertTrue(hasNode);
     }
 
     @Test
-    @DisplayName("리스트 사이즈 테스트")
+    @DisplayName("boolean contains 메서드 실패 테스트")
+    public void containsFailTest() {
+        boolean hasNode = linkedList.contains(2);
+        assertTrue(!hasNode);
+    }
+
+
+    @Test
+    @DisplayName("LinkedList 사이즈 테스트")
     public void sizeTest() {
         linkedList.add(2);
         int size = linkedList.size();
