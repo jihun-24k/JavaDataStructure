@@ -86,8 +86,8 @@ class LinkedList {
         return -1;
     }
 
-    public Node get(int index) {
-        return node(index);
+    public int get(int index) {
+        return node(index).element;
     }
 }
 

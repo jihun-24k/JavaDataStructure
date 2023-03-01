@@ -78,7 +78,7 @@ public class LinkedListTests {
     @Test
     @DisplayName("Object get 메서드 테스트")
     public void getTest() {
-        Node node = linkedList.get(2);
-        assertEquals(3, node.element);
+        int value = linkedList.get(2);
+        assertEquals(3, value);
     }
 }
