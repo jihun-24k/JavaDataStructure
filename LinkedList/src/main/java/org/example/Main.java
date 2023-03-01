@@ -17,6 +17,45 @@ class LinkedList {
     }
 
     public boolean add(int e) {
+        linkLast(e);
+        return true;
+    }
+
+
+    public void add(int index, int e) {
+        if (isPossibleIndex(index)){
+            if (size == index - 1)
+                linkLast(e);
+            else
+                linkBefore(e, node(index));
+        }
+    }
+
+    private Node node(int index) {
+        Node findNode = first;
+        while (index > 0) {
+            findNode = findNode.next;
+            index--;
+        }
+        return findNode;
+    }
+
+    private void linkBefore(int e, Node node) {
+        Node prev = node.previous;
+        Node newNode = new Node(prev, e, node);
+        node.previous = newNode;
+        if (prev == null)
+            first = newNode;
+        else
+            prev.next = newNode;
+        size++;
+    }
+
+    private boolean isPossibleIndex(int index) {
+        return index >= 0 && index < size;
+    }
+
+    private void linkLast(int e) {
         final Node l = last;
         final Node newNode = new Node(l, e, null);
         last = newNode;
@@ -27,7 +66,6 @@ class LinkedList {
             l.next = newNode;
         }
         size++;
-        return true;
     }
 
     public int size() {

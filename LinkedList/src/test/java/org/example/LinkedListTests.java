@@ -33,7 +33,7 @@ public class LinkedListTests {
     @Test
     @DisplayName("void add 메서드 테스트")
     public void voidAddTest() {
-        linkedList.add(4, 2);
+        linkedList.add(2, 4);
         int index = linkedList.indexOf(4);
         assertEquals(2, index);
     }
