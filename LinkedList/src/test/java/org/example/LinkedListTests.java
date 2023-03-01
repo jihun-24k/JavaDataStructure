@@ -74,4 +74,11 @@ public class LinkedListTests {
         int size = linkedList.size();
         assertEquals(3, size);
     }
+
+    @Test
+    @DisplayName("Object get 메서드 테스트")
+    public void getTest() {
+        Node node = linkedList.get(2);
+        assertEquals(3, node.element);
+    }
 }
