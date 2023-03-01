@@ -81,4 +81,12 @@ public class LinkedListTests {
         int value = linkedList.get(2);
         assertEquals(3, value);
     }
+
+    @Test
+    @DisplayName("Object remove 메서드 테스트")
+    public void removeTest() {
+        int value = linkedList.remove(2);
+        assertEquals(3, value);
+        assertEquals(2, linkedList.size());
+    }
 }
