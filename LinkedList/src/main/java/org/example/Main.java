@@ -89,6 +89,39 @@ class LinkedList {
     public int get(int index) {
         return node(index).element;
     }
+
+    public int remove(int index) {
+        if (!isPossibleIndex(index)) {
+            throw new IllegalArgumentException();
+        }
+        return unlink(node(index));
+    }
+
+    private int unlink(Node node) {
+        final int element = node.element;
+        final Node prev = node.previous;
+        final Node next = node.next;
+
+        if (prev == null)
+            first = next;
+        else {
+            prev.next = next;
+            node.previous = null;
+        }
+
+        if (next == null)
+            last = prev;
+        else {
+            next.previous = prev;
+            node.next = null;
+        }
+        // 원래는 node의 element 값도 null로 초기화
+        // GC의 도움을 받기 위해서
+        // 이번 구현에는 int형으로 초기화해 따로 null 처리는 하지 않았다.
+        size--;
+
+        return element;
+    }
 }
 
 class Node {
