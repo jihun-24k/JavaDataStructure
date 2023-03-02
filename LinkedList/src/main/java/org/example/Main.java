@@ -122,6 +122,17 @@ class LinkedList {
 
         return element;
     }
+
+    public void clear() {
+        for (Node node = first; node != null;) {
+            Node next = node.next;
+            node.previous = null;
+            node.next = null;
+            node = next;
+        }
+        first = last = null;
+        size = 0;
+    }
 }
 
 class Node {
