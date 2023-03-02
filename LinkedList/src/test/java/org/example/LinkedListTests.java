@@ -89,4 +89,11 @@ public class LinkedListTests {
         assertEquals(3, value);
         assertEquals(2, linkedList.size());
     }
+
+    @Test
+    @DisplayName("void clear 메서드 테스트")
+    public void clearTest() {
+        linkedList.clear();
+        assertEquals(0, linkedList.size());
+    }
 }
