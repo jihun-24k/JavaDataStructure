@@ -10,6 +10,7 @@ public class Main {
 class Stack extends Vector {
 
     public Object push(Object o) {
+        addElement(o);
         return o;
     }
 }
