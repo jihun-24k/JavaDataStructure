@@ -7,4 +7,7 @@ public class Main {
 
 class Stack {
 
+    public Object push(Object o) {
+        return o;
+    }
 }

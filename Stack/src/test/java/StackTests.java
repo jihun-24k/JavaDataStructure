@@ -16,7 +16,7 @@ public class StackTests {
         Stack stack = new Stack();
 
         //when
-        int pushedItem = stack.push(5);
+        int pushedItem = (int) stack.push(5);
 
         //then
         assertEquals(5, pushedItem);
