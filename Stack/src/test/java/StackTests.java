@@ -3,8 +3,8 @@ import org.junit.jupiter.api.Test;
 
 public class StackTests {
     @Test
-    @DisplayName("테스트 실행")
-    public void runTest() {
-
+    @DisplayName("스택 생성 테스트")
+    public void createStackTest() {
+        Stack stack = new Stack();
     }
 }
