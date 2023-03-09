@@ -20,13 +20,9 @@ class Stack extends Vector {
     }
 
     public Object pop() {
-        if (empty()) {
-            throw new EmptyStackException();
-        }
-
-        Object poped = lastElement();
-        remove(poped);
-        return poped;
+        Object item = peek();
+        remove(item);
+        return item;
     }
 
     public Object peek() {
