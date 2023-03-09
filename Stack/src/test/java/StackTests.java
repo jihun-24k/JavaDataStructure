@@ -28,4 +28,13 @@ public class StackTests {
 
         assertEquals(0, size);
     }
+
+    @Test
+    @DisplayName("item을 넣었을 때 size 테스트")
+    public void sizeWhenInsertItemTest() {
+        stack.push(0);
+        int size = stack.size();
+
+        assertEquals(1, size);
+    }
 }
