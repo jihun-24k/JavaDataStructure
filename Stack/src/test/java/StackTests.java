@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -56,4 +57,13 @@ public class StackTests {
         assertEquals(1, stack.size());
     }
 
+    @Test
+    @DisplayName("peek 테스트")
+    public void peekTest() {
+        stack.push(0);
+        stack.push(1);
+        int peekedItem = (int) stack.peek();
+        assertEquals(1, peekedItem);
+        assertEquals(2, stack.size());
+    }
 }
