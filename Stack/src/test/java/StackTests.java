@@ -66,4 +66,16 @@ public class StackTests {
         assertEquals(1, peekedItem);
         assertEquals(2, stack.size());
     }
+
+    @Test
+    @DisplayName("search 테스트")
+    public void searchTest() {
+        for (int i = 0; i < 4; i++) {
+            stack.push(i);
+        }
+
+        int index = stack.search(1);
+
+        assertEquals(3, index);
+    }
 }
