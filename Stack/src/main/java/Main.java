@@ -13,4 +13,8 @@ class Stack extends Vector {
         addElement(o);
         return o;
     }
+
+    public boolean empty() {
+        return size() == 0;
+    }
 }
