@@ -28,4 +28,11 @@ class Stack extends Vector {
         remove(poped);
         return poped;
     }
+
+    public Object peek() {
+        if (empty()) {
+            throw new EmptyStackException();
+        }
+        return elementAt(size() - 1);
+    }
 }
