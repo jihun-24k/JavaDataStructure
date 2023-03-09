@@ -20,4 +20,12 @@ public class StackTests {
         //then
         assertEquals(5, pushedItem);
     }
+
+    @Test
+    @DisplayName("size 테스트")
+    public void sizeTest() {
+        int size = stack.size();
+
+        assertEquals(0, size);
+    }
 }
