@@ -31,4 +31,12 @@ class Stack extends Vector {
         }
         return elementAt(size() - 1);
     }
+
+    public int search(Object o) {
+        int idx = lastIndexOf(o);
+        if (idx >= 0){
+            return size() - idx;
+        }
+        return -1;
+    }
 }
