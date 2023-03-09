@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -5,7 +7,7 @@ public class Main {
     }
 }
 
-class Stack {
+class Stack extends Vector {
 
     public Object push(Object o) {
         return o;
