@@ -1,19 +1,18 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StackTests {
-    @Test
-    @DisplayName("스택 생성 테스트")
-    public void createStackTest() {
-        Stack stack = new Stack();
+    Stack stack;
+    @BeforeEach
+    public void init() {
+        stack = new Stack();
     }
 
     @Test
     @DisplayName("push 테스트")
     public void pushTest() {
-        //given
-        Stack stack = new Stack();
 
         //when
         int pushedItem = (int) stack.push(5);
