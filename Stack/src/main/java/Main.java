@@ -4,3 +4,7 @@ public class Main {
 
     }
 }
+
+class Stack {
+
+}
