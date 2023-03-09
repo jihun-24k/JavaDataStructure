@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import java.util.Vector;
 
 public class Main {
@@ -16,5 +17,15 @@ class Stack extends Vector {
 
     public boolean empty() {
         return size() == 0;
+    }
+
+    public Object pop() {
+        if (empty()) {
+            throw new EmptyStackException();
+        }
+
+        Object poped = lastElement();
+        remove(poped);
+        return poped;
     }
 }

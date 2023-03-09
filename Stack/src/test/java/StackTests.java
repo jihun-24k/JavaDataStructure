@@ -51,7 +51,7 @@ public class StackTests {
     public void popTest() {
         stack.push(0);
         stack.push(1);
-        int popedItem = stack.pop();
+        int popedItem = (int) stack.pop();
         assertEquals(1, popedItem);
         assertEquals(1, stack.size());
     }
