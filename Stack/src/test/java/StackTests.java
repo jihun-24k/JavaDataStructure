@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StackTests {
     Stack stack;
@@ -36,5 +37,12 @@ public class StackTests {
         int size = stack.size();
 
         assertEquals(1, size);
+    }
+
+    @Test
+    @DisplayName("empty 테스트")
+    public void emptyTest() {
+        boolean isEmpty = stack.empty();
+        assertTrue(isEmpty);
     }
 }
